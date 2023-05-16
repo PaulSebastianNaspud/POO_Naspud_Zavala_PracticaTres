@@ -95,7 +95,7 @@ public class VistaCantante {
         entrada.nextLine();
         System.out.println("Ingresa el id del cantante a eliminar");
         int codigo = entrada.nextInt();
-        return null;
+        return new Cantante(codigo);
     }
     
     public int buscarCantante() {
