@@ -10,7 +10,6 @@ import java.util.List;
 import ups.edu.ec.practiva03.idao.ICompositorDAO;
 import ups.edu.ec.practiva03.modelo.Cancion;
 import ups.edu.ec.practiva03.modelo.Compositor;
-import ups.edu.ec.practiva03.modelo.Persona;
 
 /**
  *
@@ -28,7 +27,8 @@ public class CompositorDAO implements ICompositorDAO{
         this.listaCompositor = new ArrayList();
     }
     
-    //metodo para buscar un compositor poe un titulo de la cancion
+    //metodo sobrescrito para buscar un compositor por un titulo de la cancion
+    @Override
     public Compositor buscarPorTituloDeCancion(String valor) {
         for (Compositor compositor : listaCompositor) {  //for each de la lsita personas
             for (Cancion cancion : compositor.listarCancionesTop100Billaboar()) {
