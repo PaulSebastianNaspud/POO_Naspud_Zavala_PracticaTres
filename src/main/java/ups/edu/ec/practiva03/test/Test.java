@@ -29,6 +29,7 @@ public class Test {
         ControladorCompositor controladorCompositor = new ControladorCompositor(vistaCantante, vistaCompositor, cantanteDAO, compositorDAO);
         ControladorCantante controladorCantante = new ControladorCantante(cantanteDAO, vistaCantante);
         
+        //scanner para navegar por el menu
         Scanner entrada = new Scanner(System.in);
         
         int opcion = 0;
