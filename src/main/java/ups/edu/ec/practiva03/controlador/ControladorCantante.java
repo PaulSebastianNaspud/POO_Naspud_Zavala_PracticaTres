@@ -16,10 +16,14 @@ import ups.edu.ec.practiva03.idao.ICantanteDAO;
  * @author estem
  */
 public class ControladorCantante {
+    //objeto modelo
     private Cantante cantante;
+    //objeto vist
     private VistaCantante vistaCantante;
+    //obejto dinamico cantante
     private ICantanteDAO cantanteDAO;
     
+    //contructores
     public ControladorCantante() {
     }
 
@@ -28,6 +32,7 @@ public class ControladorCantante {
         this.vistaCantante = vistaCantante;
     }
     
+    //metodos de la clase utilzacion de los objetos
     public void registrar(){
         cantante = vistaCantante.ingresarCantante();
         cantanteDAO.create(cantante);
@@ -56,8 +61,7 @@ public class ControladorCantante {
     
     //metodo para buscar cantante por nombre del disco
     public void buscarCantantePorDisco(){
-        CantanteDAO cantanteDAOCast = (CantanteDAO) cantanteDAO;
-        cantanteDAOCast.buscarPorNombreDeDisco(vistaCantante.buscarPorNombreDeDisco());
+        cantanteDAO.buscarPorNombreDeDisco(vistaCantante.buscarPorNombreDeDisco());
         
     }
 }
