@@ -77,7 +77,6 @@ public class ControladorCompositor {
     
     //busqueda del compositor por nombre de cancion
     public void buscarCompositorPorTituloDeCancion(){
-        CompositorDAO compositorDAOCast = (CompositorDAO) compositorDAO;
-        System.out.println(compositorDAOCast.buscarPorTituloDeCancion(vistaCompositor.buscarPorTituloDeCancion()));
+        System.out.println(compositorDAO.buscarPorTituloDeCancion(vistaCompositor.buscarPorTituloDeCancion()));
     }
 }
