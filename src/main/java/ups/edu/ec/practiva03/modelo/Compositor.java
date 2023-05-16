@@ -167,7 +167,7 @@ public class Compositor extends Persona {
 
     @Override
     public String toString() {
-        return "Compositor{" + super.toString() + "numeroDeComposiciones=" + numeroDeComposiciones + '}'+ "\n cancionesTop100Billaboar=" + cancionesTop100Billaboar + " clientes=" + clientes ;
+        return "Compositor{" + super.toString() + "numeroDeComposiciones=" + numeroDeComposiciones + '}'+ "\n cancionesTop100Billaboar=" + cancionesTop100Billaboar + "\n clientes=" + clientes ;
     }
 
 }
