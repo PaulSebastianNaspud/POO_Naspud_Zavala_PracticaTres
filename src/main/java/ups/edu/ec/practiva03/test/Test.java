@@ -45,7 +45,7 @@ public class Test {
                     break;
                     
                 case 3:
-                    controladorCompositor.agreagarCantante();
+                    controladorCompositor.agreagarCliente();
                     break;
                 case 4:
                     controladorCantante.verCantantes();
@@ -63,7 +63,5 @@ public class Test {
             }
            
         }while(opcion !=7);
-            
-            
     }
 }
