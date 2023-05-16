@@ -33,7 +33,7 @@ public class CompositorDAO implements ICompositorDAO{
     
     public Compositor buscarPorTituloDeCancion(String valor) {
         for (Compositor compositor : listaCompositor) {  //for each de la lsita personas
-            for (Cancion cancion : compositor.getCancionesTop100Billaboar()) {
+            for (Cancion cancion : compositor.listarCancionesTop100Billaboar()) {
                 //comparar Strings hasta que se cumpla la condicion atraves del get
                 if (cancion.getTitulo().equals(valor)) {
                     return compositor; //retunr de persona
