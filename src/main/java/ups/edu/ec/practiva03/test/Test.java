@@ -52,7 +52,14 @@ public class Test {
                     controladorCompositor.verCompositores();
                     break;
                 case 5:
-                    
+                    controladorCantante.buscarCantantePorDisco();
+                    break;
+                case 6:
+                    controladorCompositor.buscarCompositorPorTituloDeCancion();
+                    break;
+                case 7:
+                    System.out.println("Salio del programa :)");
+                    break;
             }
            
         }while(opcion !=7);
