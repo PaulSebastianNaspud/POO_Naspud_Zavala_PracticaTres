@@ -80,7 +80,7 @@ public class VistaCompositor {
         entrada.nextLine();
         System.out.println("Ingresa el id del compositor a eliminar");
         int codigo = entrada.nextInt();
-        return null;
+        return new Compositor(codigo);
     }
     
     public int buscarCompositor() {
