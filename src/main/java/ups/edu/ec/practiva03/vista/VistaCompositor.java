@@ -13,8 +13,10 @@ import ups.edu.ec.practiva03.modelo.Compositor;
  * @author estem
  */
 public class VistaCompositor {
+    //Scanner para ingrasaer datos por teclado
     Scanner entrada = new Scanner(System.in);
     
+    //ingresar los datos del cantante y una lista de canciones
     public Compositor inresarCompositor(){
         //Ingresar datos por teclado con el Scanner
         System.out.println("Ingresar el codigo del compositor: ");
@@ -53,7 +55,8 @@ public class VistaCompositor {
         compositor.calularSalario(); // llamar al metodo calcularSalario
         return compositor;
     }
-    
+
+    //actualizar datos del compositor atraves del codigo   
     public Compositor actualizaCompositor(){
         entrada.nextLine();//posible salto de nextInt
         //Ingresar datos por teclado con el Scanner
@@ -76,6 +79,7 @@ public class VistaCompositor {
         return new Compositor(nDeComposiciones, codigo, nombre, apellido, edad, salario, nacionalidad);
     }
     
+    //metodo para elimiar compositor atraves del id, utiliza un constructor deun  solo con el parametro codigo, no le elimina
     public Compositor eliminarCompositor(){
         entrada.nextLine();
         System.out.println("Ingresa el id del compositor a eliminar");
@@ -83,17 +87,20 @@ public class VistaCompositor {
         return new Compositor(codigo);
     }
     
+    //buscar compositor, ingresar dato del codigo del compositor
     public int buscarCompositor() {
         entrada = new Scanner(System.in);
         System.out.println("Ingresa el id del compositor a buscar");
         int id = entrada.nextInt();
         return id;
     }
-
+    
+    //recibe un compositor e imprime los datos
     public void verCompositor(Compositor compositor) {
         System.out.println("Datos del compositor: " + compositor);
     }
-
+    
+    //ver la lista de compositor
     public void verCompositores(List<Compositor> compositores) {
         for (Compositor c : compositores) {
             System.out.println("Datos de las lista cantantes: " + c);
