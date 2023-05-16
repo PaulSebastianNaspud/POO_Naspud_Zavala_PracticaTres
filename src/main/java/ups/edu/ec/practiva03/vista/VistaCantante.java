@@ -14,7 +14,7 @@ import ups.edu.ec.practiva03.modelo.Cantante;
  */
 public class VistaCantante {
     
-    //llamar al metodo scanner para ingresar datos por teclado
+    //Scanner para ingresar datos por teclado
     Scanner entrada = new Scanner(System.in);
     
     //metodo para ingresar los datos del cantante junto a una discografia
