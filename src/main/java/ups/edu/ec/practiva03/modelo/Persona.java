@@ -4,21 +4,22 @@
  */
 package ups.edu.ec.practiva03.modelo;
 
-import java.util.Objects;
-
 /**
  *
  * @author estem
  */
+
 public abstract class Persona {
     
+    //atributos de la clase
     private int codigo;
     private String nombre;
     private String apellido;
     private int edad;
     private double salario;
     private String nacionalidad;
-
+    
+    //constructores nescesarios
     public Persona() {
     }
 
@@ -26,7 +27,6 @@ public abstract class Persona {
         this.codigo = codigo;
     }
     
-
     public Persona(int codigo, String nombre, String apellido, int edad, double salario, String nacionalidad) {
         this.codigo = codigo;
         this.nombre = nombre;
@@ -36,6 +36,7 @@ public abstract class Persona {
         this.nacionalidad = nacionalidad;
     }
     
+    //get and set de la clase
     public int getCodigo() {
         return codigo;
     }
@@ -83,8 +84,11 @@ public abstract class Persona {
     public void setNacionalidad(String nacionalidad) {
         this.nacionalidad = nacionalidad;
     }
+    
+    //metodo abstract
     public abstract double calularSalario();
-
+    
+    //hashCode y equals del atributo codigo
     @Override
     public int hashCode() {
         int hash = 3;
@@ -104,25 +108,10 @@ public abstract class Persona {
             return false;
         }
         final Persona other = (Persona) obj;
-        if (this.codigo != other.codigo) {
-            return false;
-        }
-        if (this.edad != other.edad) {
-            return false;
-        }
-        if (Double.doubleToLongBits(this.salario) != Double.doubleToLongBits(other.salario)) {
-            return false;
-        }
-        if (!Objects.equals(this.nombre, other.nombre)) {
-            return false;
-        }
-        if (!Objects.equals(this.apellido, other.apellido)) {
-            return false;
-        }
-        return Objects.equals(this.nacionalidad, other.nacionalidad);
+        return this.codigo == other.codigo;
     }
     
-    
+    //toString
     @Override
     public String toString() {
         return "{codigo=" + codigo + ", nombre=" + nombre + ", apellido=" + apellido + ", edad=" + edad + ", salario=" + salario + ", nacionalidad=" + nacionalidad + '}';
