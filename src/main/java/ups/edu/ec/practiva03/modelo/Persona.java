@@ -21,6 +21,10 @@ public abstract class Persona {
 
     public Persona() {
     }
+
+    public Persona(int codigo) {
+        this.codigo = codigo;
+    }
     
 
     public Persona(int codigo, String nombre, String apellido, int edad, double salario, String nacionalidad) {
