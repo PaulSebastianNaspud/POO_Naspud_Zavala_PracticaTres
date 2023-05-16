@@ -6,6 +6,8 @@ package ups.edu.ec.practiva03.controlador;
 
 import java.util.ArrayList;
 import java.util.List;
+import ups.edu.ec.practiva03.dao.CantanteDAO;
+import ups.edu.ec.practiva03.dao.CompositorDAO;
 import ups.edu.ec.practiva03.idao.ICompositorDAO;
 import ups.edu.ec.practiva03.modelo.Cantante;
 import ups.edu.ec.practiva03.modelo.Compositor;
@@ -72,5 +74,10 @@ public class ControladorCompositor {
             compositor.agregarCantante(cantante);
             compositorDAO.update(compositor);
         }
+    }
+    //busqueda del compositor por nombre de cancion
+    public void buscarCompositorPorTituloDeCancion(){
+        CompositorDAO compositorDAOCast = (CompositorDAO) compositorDAO;
+        System.out.println(compositorDAOCast.buscarPorTituloDeCancion(vistaCompositor.buscarPorTituloDeCancion()));
     }
 }
