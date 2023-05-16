@@ -27,6 +27,8 @@ public class Compositor extends Persona {
 
     public Compositor(int codigo) {
         super(codigo);
+        this.clientes = new ArrayList();
+        this.cancionesTop100Billaboar = new ArrayList();
     }
 
     public Compositor(int numeroDeComposiciones, int codigo, String nombre, String apellido, int edad, double salario, String nacionalidad) {
@@ -43,22 +45,6 @@ public class Compositor extends Persona {
 
     public void setNumeroDeComposiciones(int numeroDeComposiciones) {
         this.numeroDeComposiciones = numeroDeComposiciones;
-    }
-
-    public List<Cancion> getCancionesTop100Billaboar() {
-        return cancionesTop100Billaboar;
-    }
-
-    public void setCancionesTop100Billaboar(List<Cancion> cancionesTop100Billaboar) {
-        this.cancionesTop100Billaboar = cancionesTop100Billaboar;
-    }
-
-    public List<Cantante> getClientes() {
-        return clientes;
-    }
-
-    public void setClientes(List<Cantante> clientes) {
-        this.clientes = clientes;
     }
     
     //top100Billaboar
