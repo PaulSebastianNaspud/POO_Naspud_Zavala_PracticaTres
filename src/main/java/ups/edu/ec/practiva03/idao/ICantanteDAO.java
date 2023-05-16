@@ -25,4 +25,7 @@ public interface ICantanteDAO {
     public abstract void delete(Cantante obj);//D
     //metodo de return de la lista de personas final
     public List<Cantante> findAll();
+    
+    //metodo para buscar un cantante atraves del nombre de un disco
+    public abstract Cantante buscarPorNombreDeDisco(String valor);
 }
