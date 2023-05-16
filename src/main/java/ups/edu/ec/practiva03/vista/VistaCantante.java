@@ -93,7 +93,7 @@ public class VistaCantante {
         return new Cantante(nombreArtistico, generoMusical, nSensillos, nConciertos, nGiras, codigo, nombre, apellido, edad, salario, nacionalidad);
     }
     
-    //metodo para elimiar cantante atraves del id, utiliza un constructor solo con el parametro codigo no le elimina
+    //metodo para elimiar cantante atraves del id, utiliza un constructor de un solo con el parametro codigo, no le elimina
     public Cantante eliminarCantante(){
         entrada.nextLine();
         System.out.println("Ingresa el codigo del cantante a eliminar");
@@ -104,8 +104,8 @@ public class VistaCantante {
     //buscar cantante, ingresa dato del codigo del cantante
     public int buscarCantante() {
         System.out.println("Ingresa el codigo del cantante a buscar");
-        int id = entrada.nextInt();
-        return id;
+        int codigo = entrada.nextInt();
+        return codigo;
     }
     
     //recibe un cantante e imprime los datos
