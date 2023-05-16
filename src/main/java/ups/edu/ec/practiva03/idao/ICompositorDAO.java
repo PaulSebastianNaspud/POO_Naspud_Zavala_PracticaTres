@@ -28,6 +28,6 @@ public interface ICompositorDAO {
     //metodo de return de la lista de personas final
     public List<Compositor> findAll();
     
-    //metodo para buscar cancion por el titulo
+    //metodo para buscar un compositor por el titulo de un cancion
     public abstract Compositor buscarPorTituloDeCancion(String valor);
 }
