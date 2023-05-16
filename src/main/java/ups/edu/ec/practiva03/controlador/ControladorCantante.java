@@ -60,7 +60,8 @@ public class ControladorCantante {
     
     //metodo para buscar cantante por nombre del disco
     public void buscarCantantePorDisco(){
-        System.out.println(cantanteDAO.buscarPorNombreDeDisco(vistaCantante.buscarPorNombreDeDisco()));
+        String nombre = vistaCantante.buscarPorNombreDeDisco();
+        System.out.println(cantanteDAO.buscarPorNombreDeDisco(nombre));
         
     }
 }
