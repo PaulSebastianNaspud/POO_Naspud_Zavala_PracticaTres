@@ -13,16 +13,17 @@ import java.util.Objects;
  * @author estem
  */
 public class Cantante extends Persona {
+    
     //atributos private de la clase y encapsulamiento
-
     private String nombreArtistico;
     private String generoMusical;
     private int numeroDeSensillos;
     private int numeroDeConciertos;
     private int numeroDeGiras;
-    //atributo private de relacion con la clase Disco y encapsulamiento
+    //atributo private de relacion con la clase disco
     private List<Disco> discografia;
-
+    
+    //contructores nescesarios
     public Cantante() {
         this.discografia = new ArrayList();
     }
@@ -41,7 +42,8 @@ public class Cantante extends Persona {
         this.numeroDeGiras = numeroDeGiras;
         this.discografia = new ArrayList();
     }
-
+    
+    //get and set
     public String getNombreArtistico() {
         return nombreArtistico;
     }
@@ -82,7 +84,7 @@ public class Cantante extends Persona {
         this.numeroDeGiras = numeroDeGiras;
     }
 
-    //disco
+    //metodos de la discografia
     public void agregarDisco(int codigo, String nombre, int anioDeLanzamiento) {
         Disco disco = new Disco(codigo, nombre, anioDeLanzamiento);
         discografia.add(disco);
@@ -114,7 +116,8 @@ public class Cantante extends Persona {
         }
         return null;
     }
-
+    
+    //metodos de la clase abstract persona
     @Override
     public double calularSalario() {
         if (numeroDeSensillos > 10 && numeroDeGiras > 3) {
@@ -127,7 +130,8 @@ public class Cantante extends Persona {
         }
         return super.getSalario();
     }
-
+    
+    // hashCode y equals de codigo de la clase padre
     @Override
     public int hashCode() {
         int hash = 3;
@@ -147,9 +151,10 @@ public class Cantante extends Persona {
             return false;
         }
         final Cantante other = (Cantante) obj;
-        return super.equals(obj) == super.equals(obj);
+        return super.hashCode() == other.getCodigo();
     }
     
+    //toString
     @Override
     public String toString() {
         return "Cantante{" + super.toString() + "nombreArtistico=" + nombreArtistico + ", generoMusical=" + generoMusical + ", numeroDeSensillos=" + numeroDeSensillos + ", numeroDeConciertos=" + numeroDeConciertos + ", numeroDeGiras=" + numeroDeGiras + '}' + "\n discografia=" + discografia;
