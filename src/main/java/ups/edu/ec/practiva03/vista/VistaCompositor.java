@@ -99,4 +99,11 @@ public class VistaCompositor {
             System.out.println("Datos de las lista cantantes: " + c);
         }
     }
+    //buscar compositor por nombre de cancion
+    public String buscarPorTituloDeCancion(){
+        System.out.println("Ingresar el nombre de la cancion del compositor");
+        String nombre = entrada.nextLine();
+        return nombre;
+    }
+    
 }
