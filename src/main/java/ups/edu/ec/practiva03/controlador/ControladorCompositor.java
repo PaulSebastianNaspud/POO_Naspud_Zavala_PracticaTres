@@ -6,7 +6,6 @@ package ups.edu.ec.practiva03.controlador;
 
 import java.util.ArrayList;
 import java.util.List;
-import ups.edu.ec.practiva03.dao.CantanteDAO;
 import ups.edu.ec.practiva03.dao.CompositorDAO;
 import ups.edu.ec.practiva03.idao.ICompositorDAO;
 import ups.edu.ec.practiva03.modelo.Cantante;
