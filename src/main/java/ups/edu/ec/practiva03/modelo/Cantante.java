@@ -29,6 +29,7 @@ public class Cantante extends Persona {
 
     public Cantante(int codigo) {
         super(codigo);
+        this.discografia= new ArrayList();
     }
     
     public Cantante(String nombreArtistico, String generoMusical, int numeroDeSensillos, int numeroDeConciertos, int numeroDeGiras, int codigo, String nombre, String apellido, int edad, double salario, String nacionalidad) {
@@ -81,16 +82,7 @@ public class Cantante extends Persona {
         this.numeroDeGiras = numeroDeGiras;
     }
 
-    public List<Disco> getDiscografia() {
-        return discografia;
-    }
-
-    public void setDiscografia(List<Disco> discografia) {
-        this.discografia = discografia;
-    }
-
     //disco
-    
     public void agregarDisco(int codigo, String nombre, int anioDeLanzamiento) {
         Disco disco = new Disco(codigo, nombre, anioDeLanzamiento);
         discografia.add(disco);
@@ -155,24 +147,9 @@ public class Cantante extends Persona {
             return false;
         }
         final Cantante other = (Cantante) obj;
-        if (this.numeroDeSensillos != other.numeroDeSensillos) {
-            return false;
-        }
-        if (this.numeroDeConciertos != other.numeroDeConciertos) {
-            return false;
-        }
-        if (this.numeroDeGiras != other.numeroDeGiras) {
-            return false;
-        }
-        if (!Objects.equals(this.nombreArtistico, other.nombreArtistico)) {
-            return false;
-        }
-        if (!Objects.equals(this.generoMusical, other.generoMusical)) {
-            return false;
-        }
-        return Objects.equals(this.discografia, other.discografia);
+        return super.equals(obj) == super.equals(obj);
     }
-
+    
     @Override
     public String toString() {
         return "Cantante{" + super.toString() + "nombreArtistico=" + nombreArtistico + ", generoMusical=" + generoMusical + ", numeroDeSensillos=" + numeroDeSensillos + ", numeroDeConciertos=" + numeroDeConciertos + ", numeroDeGiras=" + numeroDeGiras + '}' + "\n discografia=" + discografia;
