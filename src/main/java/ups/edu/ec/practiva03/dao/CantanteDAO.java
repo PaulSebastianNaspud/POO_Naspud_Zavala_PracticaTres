@@ -30,7 +30,7 @@ public class CantanteDAO implements ICantanteDAO{
     //metodo para Disco
     public Cantante buscarPorNombreDeDisco(String valor) {  
         for (Cantante cantante : listaCantante) { //for each de la lista de las personas
-                for (Disco disco : cantante.getDiscografia()) { 
+                for (Disco disco : cantante.listarDiscografia()) { 
                     //comparar Strings hasta que se cumpla la condicion atraves del get
                     if (disco.getNombre().equals(valor)) { 
                         return cantante; //return de persona
