@@ -113,4 +113,11 @@ public class VistaCantante {
             System.out.println("Datos de las lista cantantes: " + c);
         }
     }
+    
+    //buscar cantante por disco
+    public String buscarPorNombreDeDisco(){
+        System.out.println("Ingresar el nombre del disco del cantante");
+        String nombre = entrada.nextLine();
+        return nombre;
+    }
 }
