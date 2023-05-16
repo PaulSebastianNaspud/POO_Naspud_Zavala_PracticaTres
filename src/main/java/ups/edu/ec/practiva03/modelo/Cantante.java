@@ -27,6 +27,10 @@ public class Cantante extends Persona {
         this.discografia = new ArrayList();
     }
 
+    public Cantante(int codigo) {
+        super(codigo);
+    }
+    
     public Cantante(String nombreArtistico, String generoMusical, int numeroDeSensillos, int numeroDeConciertos, int numeroDeGiras, int codigo, String nombre, String apellido, int edad, double salario, String nacionalidad) {
         super(codigo, nombre, apellido, edad, salario, nacionalidad);
         this.nombreArtistico = nombreArtistico;
@@ -169,7 +173,6 @@ public class Cantante extends Persona {
         return Objects.equals(this.discografia, other.discografia);
     }
 
-    
     @Override
     public String toString() {
         return "Cantante{" + super.toString() + "nombreArtistico=" + nombreArtistico + ", generoMusical=" + generoMusical + ", numeroDeSensillos=" + numeroDeSensillos + ", numeroDeConciertos=" + numeroDeConciertos + ", numeroDeGiras=" + numeroDeGiras + '}' + "\n discografia=" + discografia;
