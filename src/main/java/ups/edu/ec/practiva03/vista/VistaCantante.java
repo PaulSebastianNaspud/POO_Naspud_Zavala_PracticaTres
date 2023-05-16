@@ -13,9 +13,11 @@ import ups.edu.ec.practiva03.modelo.Cantante;
  * @author estem
  */
 public class VistaCantante {
-
+    
+    //llamar al metodo scanner para ingresar datos por teclado
     Scanner entrada = new Scanner(System.in);
     
+    //metodo para ingresar los datos del cantante junto a una discografia
     public Cantante ingresarCantante(){
         //Ingresar datos por teclado con el Scanner
         System.out.println("Ingresar el codigo del cantante: ");
@@ -57,11 +59,11 @@ public class VistaCantante {
             //utilizar el metdodo agregarDisco para aañadir discos a la lista del objeto
             cantante.agregarDisco(codigo2, nomreCancion, anioDeLanzamiento);
         }
-        cantante.calularSalario();
-        //llamar al metodo calcularSalario para calcular el salrio final y utiliazcion de los metodos sobrescritos abstract
+        cantante.calularSalario();//llamar al metodo calcularSalario para calcular el salrio final y utiliazcion de los metodos sobrescritos abstract
         return cantante;
     }
     
+    //metodo para actualizar datos del cantante por teclado
     public Cantante actualizarCantante(){
         //Ingresar datos por teclado con el Scanner
         System.out.println("Ingresar el codigo del cantante a actualizar: ");
@@ -91,32 +93,36 @@ public class VistaCantante {
         return new Cantante(nombreArtistico, generoMusical, nSensillos, nConciertos, nGiras, codigo, nombre, apellido, edad, salario, nacionalidad);
     }
     
+    //metodo para elimiar cantante atraves del id, utiliza un constructor solo con el parametro codigo no le elimina
     public Cantante eliminarCantante(){
         entrada.nextLine();
-        System.out.println("Ingresa el id del cantante a eliminar");
+        System.out.println("Ingresa el codigo del cantante a eliminar");
         int codigo = entrada.nextInt();
         return new Cantante(codigo);
     }
     
+    //buscar cantante, ingresa dato del codigo del cantante
     public int buscarCantante() {
-        System.out.println("Ingresa el id del cantante a buscar");
+        System.out.println("Ingresa el codigo del cantante a buscar");
         int id = entrada.nextInt();
         return id;
     }
-
+    
+    //recibe un cantante e imprime los datos
     public void verCantante(Cantante cantante) {
         System.out.println("Datos del cantante: " + cantante);
     }
-
+    
+    //ver la lista de cantantes
     public void verCantantes(List<Cantante> cantantes) {
         for (Cantante c : cantantes) {
-            System.out.println("Datos de las lista cantantes: " + c);
+            System.out.println("Datos cantante: " + c);
         }
     }
     
-    //buscar cantante por disco
+    //buscar cantante por disco, String nombre
     public String buscarPorNombreDeDisco(){
-        System.out.println("Ingresar el nombre del disco del cantante");
+        System.out.println("Ingresar el nombre del disco del cantante: ");
         String nombre = entrada.nextLine();
         return nombre;
     }
