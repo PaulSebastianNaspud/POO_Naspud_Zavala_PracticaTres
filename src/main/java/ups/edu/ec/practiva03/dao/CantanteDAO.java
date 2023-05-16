@@ -12,22 +12,18 @@ import ups.edu.ec.practiva03.modelo.Disco;
 import ups.edu.ec.practiva03.idao.ICantanteDAO;
 
 public class CantanteDAO implements ICantanteDAO{
+    //contador estatico para el maximo elementos de la lista de la clase
     static int cont = 0;
+    
+    //atributo lista cantante
     private List<Cantante> listaCantante;
-
+    
+    //contructor
     public CantanteDAO() {
         this.listaCantante = new ArrayList();
     }
 
-    public List<Cantante> getListaCantante() {
-        return listaCantante;
-    }
-
-    public void setListaCantante(List<Cantante> listaCantante) {
-        this.listaCantante = listaCantante;
-    }
-    
-    //metodo para Disco
+    //metodo para buscar cantante por nombre de disco
     public Cantante buscarPorNombreDeDisco(String valor) {  
         for (Cantante cantante : listaCantante) { //for each de la lista de las personas
                 for (Disco disco : cantante.listarDiscografia()) { 
@@ -81,7 +77,7 @@ public class CantanteDAO implements ICantanteDAO{
             }
         }
     }
-
+    
     @Override
     public List<Cantante> findAll() {
         return listaCantante ;
