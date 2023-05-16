@@ -14,12 +14,14 @@ import java.util.Objects;
  */
 public class Compositor extends Persona {
 
-    //private de los atributos de la clase y encapsulamiento
+    //atributos de la clase 
     private int numeroDeComposiciones;
+    
     //atributos de relaciones con las otras clases
     private List<Cancion> cancionesTop100Billaboar;
     private List<Cantante> clientes;
-
+    
+    //contructores nescesarios
     public Compositor() {
         this.clientes = new ArrayList();
         this.cancionesTop100Billaboar = new ArrayList();
@@ -38,7 +40,7 @@ public class Compositor extends Persona {
         this.cancionesTop100Billaboar = new ArrayList();
     }
     
-
+    //get and set del atributo
     public int getNumeroDeComposiciones() {
         return numeroDeComposiciones;
     }
@@ -112,7 +114,7 @@ public class Compositor extends Persona {
         return null;
     }
     
-    //herencia
+    //metodo abstract de la herencia
     @Override
     public double calularSalario() {
         if (numeroDeComposiciones > 5) {
@@ -134,7 +136,7 @@ public class Compositor extends Persona {
         hash = 67 * hash + super.hashCode();
         return hash;
     }
-    
+
     @Override
     public boolean equals(Object obj) {
         if (this == obj) {
@@ -147,15 +149,9 @@ public class Compositor extends Persona {
             return false;
         }
         final Compositor other = (Compositor) obj;
-        if (this.numeroDeComposiciones != other.numeroDeComposiciones) {
-            return false;
-        }
-        if (!Objects.equals(this.cancionesTop100Billaboar, other.cancionesTop100Billaboar)) {
-            return false;
-        }
-        return Objects.equals(this.clientes, other.clientes);
+        return super.hashCode() == other.getCodigo();
     }
-
+    
     @Override
     public String toString() {
         return "Compositor{" + super.toString() + "numeroDeComposiciones=" + numeroDeComposiciones + '}'+ "\n cancionesTop100Billaboar=" + cancionesTop100Billaboar + "\n clientes=" + clientes ;
