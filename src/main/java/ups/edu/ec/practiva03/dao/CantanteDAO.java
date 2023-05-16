@@ -23,7 +23,8 @@ public class CantanteDAO implements ICantanteDAO{
         this.listaCantante = new ArrayList();
     }
 
-    //metodo para buscar cantante por nombre de disco
+    //sobre escritura del metodo para buscar cantante por nombre de disco
+    @Override
     public Cantante buscarPorNombreDeDisco(String valor) {  
         for (Cantante cantante : listaCantante) { //for each de la lista de las personas
                 for (Disco disco : cantante.listarDiscografia()) { 
