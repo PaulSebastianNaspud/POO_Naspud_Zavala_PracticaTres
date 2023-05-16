@@ -65,15 +65,16 @@ public class ControladorCompositor {
         vistaCompositor.verCompositores(compositores);
     }
     
-    public void agreagarCantante(){
+    public void agreagarCliente(){
         int id = vistaCantante.buscarCantante();
         cantante = cantanteDAO.read(id);
         int condigo = vistaCompositor.buscarCompositor();
         if(compositor != null && cantante != null){
-            compositor.agregarCantante(cantante);
+            compositor.agregarCliente(cantante);
             compositorDAO.update(compositor);
         }
     }
+    
     //busqueda del compositor por nombre de cancion
     public void buscarCompositorPorTituloDeCancion(){
         CompositorDAO compositorDAOCast = (CompositorDAO) compositorDAO;
