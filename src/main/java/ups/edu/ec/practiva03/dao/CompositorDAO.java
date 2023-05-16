@@ -17,20 +17,18 @@ import ups.edu.ec.practiva03.modelo.Persona;
  * @author estem
  */
 public class CompositorDAO implements ICompositorDAO{
-    
-    List <Compositor> listaCompositor;
+    //contador estatico para el maximo de elementos de la clase
     static int cont;
     
+    // atributo lista compositor
+    List <Compositor> listaCompositor;
+    
+    //constructor
     public CompositorDAO() {
         this.listaCompositor = new ArrayList();
     }
     
-    public void imprimir(){
-        for (Persona persona : listaCompositor) {
-            System.out.println(persona);
-        }
-    }
-    
+    //metodo para buscar un compositor poe un titulo de la cancion
     public Compositor buscarPorTituloDeCancion(String valor) {
         for (Compositor compositor : listaCompositor) {  //for each de la lsita personas
             for (Cancion cancion : compositor.listarCancionesTop100Billaboar()) {
@@ -42,7 +40,7 @@ public class CompositorDAO implements ICompositorDAO{
         }return null; // si no existe, return null
     }
     
-    //metodos sobreescritos IPesona
+    //metodos sobreescritos ICompositor
     @Override
     public void create(Compositor obj) {
         if (cont < MAX_OBJECTCS) {
