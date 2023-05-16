@@ -6,7 +6,6 @@ package ups.edu.ec.practiva03.controlador;
 
 import java.util.ArrayList;
 import java.util.List;
-import ups.edu.ec.practiva03.dao.CantanteDAO;
 import ups.edu.ec.practiva03.modelo.Cantante;
 import ups.edu.ec.practiva03.vista.VistaCantante;
 import ups.edu.ec.practiva03.idao.ICantanteDAO;
@@ -61,7 +60,7 @@ public class ControladorCantante {
     
     //metodo para buscar cantante por nombre del disco
     public void buscarCantantePorDisco(){
-        cantanteDAO.buscarPorNombreDeDisco(vistaCantante.buscarPorNombreDeDisco());
+        System.out.println(cantanteDAO.buscarPorNombreDeDisco(vistaCantante.buscarPorNombreDeDisco()));
         
     }
 }
