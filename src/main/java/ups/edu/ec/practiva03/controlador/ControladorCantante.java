@@ -22,7 +22,7 @@ public class ControladorCantante {
     //obejto dinamico cantante
     private ICantanteDAO cantanteDAO;
     
-    //contructores
+    //constructores
     public ControladorCantante() {
     }
 
@@ -57,6 +57,9 @@ public class ControladorCantante {
         cantantes = cantanteDAO.findAll();
         vistaCantante.verCantantes(cantantes);
     }
+    
+    //metodos de la composcion
+    
     
     //metodo para buscar cantante por nombre del disco
     public void buscarCantantePorDisco(){
