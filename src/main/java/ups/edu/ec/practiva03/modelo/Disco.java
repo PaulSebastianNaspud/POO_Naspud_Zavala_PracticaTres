@@ -19,6 +19,10 @@ public class Disco {
     public Disco() {
     }
 
+    public Disco(int codigo) {
+        this.codigo = codigo;
+    }
+
     public Disco(int codigo, String nombre, int anioDeLanzamiento) {
         this.codigo = codigo;
         this.nombre = nombre;
