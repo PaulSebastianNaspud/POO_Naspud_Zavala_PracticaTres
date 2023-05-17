@@ -34,35 +34,53 @@ public class Test {
         
         int opcion = 0;
         do{
-            System.out.println("\n Menu \n1. Ingreso de Cantante \n2. Ingreson de Compositor \n3. Agregar Clientes \n4. Imprimir"
-                    + " \n5. Busqueda de cantante por el nombre del disco \n6. Busqueda de compositor por nombre de cancion \n7. Salir");
+            System.out.println("\n Menu \n1. Opciones Cantante \n2. Opciones del compositor /");
             opcion = entrada.nextInt();
             switch(opcion) {
                 case 1:
-                    controladorCantante.registrar();
-                    break;
+                    System.out.println("\nMenu del Cantante \n1 Registrar Cantante \n2. Ver Cantante \n3. Actualizar Cantante \n4. Eliminar Cantante \n5. Ver lista Cantantes \n6. Volver al menu Principal");
+                    opcion = entrada.nextInt();
+                    do{
+                        switch(opcion){
+                            case 1:
+                                controladorCantante.registrar();
+                                break;
+                            case 2:
+                                controladorCantante.verCantante();
+                            case 3:
+                                controladorCantante.actualizarCantante();
+                            case 4:
+                                controladorCantante.eliminar();
+                            case 5:
+                                controladorCantante.verCantantes();
+                            case 6:
+                                System.out.println("Volvio");
+                        }
+                        
+                    }while(opcion !=6);
                 case 2:
-                    controladorCompositor.reigistrar();
-                    break;
-                    
-                case 3:
-                    controladorCompositor.agreagarCliente();
-                    break;
-                case 4:
-                    controladorCantante.verCantantes();
-                    controladorCompositor.verCompositores();
-                    break;
-                case 5:
-                    controladorCantante.buscarCantantePorDisco();
-                    break;
-                case 6:
-                    controladorCompositor.buscarCompositorPorTituloDeCancion();
-                    break;
-                case 7:
-                    System.out.println("Salio del programa :)");
-                    break;
+                    System.out.println("\nMenu del Compositor \n1 Registrar Compositor \n2. Ver Compositor \n3. Actualizar Compositor \n4. Eliminar Compositor \n5. Ver lista Compositores \n.6 Volver al menu Principal");
+                    opcion = entrada.nextInt();
+                    do{
+                        switch(opcion){
+                            case 1:
+                                controladorCompositor.registrar();
+                                break;
+                            case 2:
+                                controladorCompositor.verCompositor();
+                            case 3:
+                                controladorCompositor.actualizarCompositor();
+                            case 4:
+                                controladorCompositor.eliminar();
+                            case 5:
+                                controladorCompositor.verCompositores();
+                            case 6:
+                                System.out.println("Volvio");
+                        }
+                        
+                    }while(opcion !=6);
             }
            
-        }while(opcion !=7);
+        }while(opcion !=10);
     }
 }
