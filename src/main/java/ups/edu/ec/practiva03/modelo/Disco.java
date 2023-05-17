@@ -4,8 +4,6 @@
  */
 package ups.edu.ec.practiva03.modelo;
 
-import java.util.Objects;
-
 /**
  *
  * @author estem
