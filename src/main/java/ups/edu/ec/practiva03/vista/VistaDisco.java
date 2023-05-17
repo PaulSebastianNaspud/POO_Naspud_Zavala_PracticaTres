@@ -14,7 +14,6 @@ import ups.edu.ec.practiva03.modelo.Disco;
  */
 public class VistaDisco {
     Scanner entrada = new Scanner(System.in);
-    //ingresar falta
     public Disco ingresarDisco(){
        entrada.nextLine();//posible salto de nextInt
         //Ingresar datos por teclado con el Scanner
@@ -32,10 +31,10 @@ public class VistaDisco {
         //Ingresar datos por teclado con el Scanner
         System.out.println("Ingresar el codigo del disco a actualizar: ");
         int codigo = entrada.nextInt();
-        System.out.println("Ingresar el año del disco a actualizar: ");
+        System.out.println("Ingresar el año del disco: ");
         int anioLanzamiento = entrada.nextInt();
         entrada.nextLine();//posible salto de nextInt
-        System.out.println("Ingresar el nombre del disco a actualizar: ");
+        System.out.println("Ingresar el nombre del disco: ");
         String nombre = entrada.nextLine();
         return new Disco(codigo, nombre, anioLanzamiento);
     }
