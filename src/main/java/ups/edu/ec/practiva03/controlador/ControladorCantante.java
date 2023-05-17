@@ -62,6 +62,5 @@ public class ControladorCantante {
     public void buscarCantantePorDisco(){
         String nombre = vistaCantante.buscarPorNombreDeDisco();
         System.out.println(cantanteDAO.buscarPorNombreDeDisco(nombre));
-        
     }
 }
