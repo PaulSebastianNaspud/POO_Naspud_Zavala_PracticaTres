@@ -81,19 +81,9 @@ public class Cancion {
             return false;
         }
         final Cancion other = (Cancion) obj;
-        if (this.codigo != other.codigo) {
-            return false;
-        }
-        if (Double.doubleToLongBits(this.tiempoEnMinutos) != Double.doubleToLongBits(other.tiempoEnMinutos)) {
-            return false;
-        }
-        if (!Objects.equals(this.titulo, other.titulo)) {
-            return false;
-        }
-        return Objects.equals(this.letra, other.letra);
+        return this.codigo == other.codigo;
     }
-    
-    
+        
     @Override
     public String toString() {
         return "Cancion{" + "codigo=" + codigo + ", titulo=" + titulo + ", letra=" + letra + ", tiempoEnMinutos=" + tiempoEnMinutos + '}';
