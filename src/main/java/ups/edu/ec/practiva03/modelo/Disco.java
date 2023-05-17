@@ -49,7 +49,8 @@ public class Disco {
     public void setAnioDeLanzamiento(int anioDeLanzamiento) {
         this.anioDeLanzamiento = anioDeLanzamiento;
     }
-
+    
+    //metodos de la clase
     @Override
     public int hashCode() {
         int hash = 5;
