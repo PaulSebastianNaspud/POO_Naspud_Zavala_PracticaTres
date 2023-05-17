@@ -38,7 +38,7 @@ public class ControladorCompositor {
     }
     
     
-    public void reigistrar(){
+    public void registrar(){
         compositor = vistaCompositor.inresarCompositor();
         compositorDAO.create(compositor);
     }
@@ -49,7 +49,7 @@ public class ControladorCompositor {
         vistaCompositor.verCompositor(compositor);
     }
     
-    public void actualizar(){
+    public void actualizarCompositor(){
         compositor = vistaCompositor.actualizaCompositor();
         compositorDAO.update(compositor);
     }
