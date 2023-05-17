@@ -19,6 +19,11 @@ public class Cancion {
     //constructo de la clase
     public Cancion() {
     }
+
+    public Cancion(int codigo) {
+        this.codigo = codigo;
+    }
+    
     
     public Cancion(int codigo, String titulo, String letra, double tiempoEnMinutos) {
         this.codigo = codigo;
