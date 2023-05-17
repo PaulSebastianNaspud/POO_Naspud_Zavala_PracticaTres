@@ -11,13 +11,13 @@ import java.util.Objects;
  * @author estem
  */
 public class Disco {
+
     //atributos private de la clase y encapsulamiento
     private int codigo;
     private String nombre;
     private int anioDeLanzamiento;
 
     //contructor de la clase Disco
-    
     public Disco() {
     }
 
@@ -71,20 +71,12 @@ public class Disco {
             return false;
         }
         final Disco other = (Disco) obj;
-        if (this.codigo != other.codigo) {
-            return false;
-        }
-        if (this.anioDeLanzamiento != other.anioDeLanzamiento) {
-            return false;
-        }
-        return Objects.equals(this.nombre, other.nombre);
+        return this.codigo == other.codigo;
     }
-    
-    
+
     @Override
     public String toString() {
         return "Disco{" + "codigo=" + codigo + ", nombre=" + nombre + ", anioDeLanzamiento=" + anioDeLanzamiento + '}';
     }
-    
-    
+
 }
