@@ -69,6 +69,7 @@ public class ControladorCompositor {
         int id = vistaCantante.buscarCantante();
         cantante = cantanteDAO.read(id);
         int condigo = vistaCompositor.buscarCompositor();
+        compositor = compositorDAO.read(condigo);
         if(compositor != null && cantante != null){
             compositor.agregarCliente(cantante);
             compositorDAO.update(compositor);
