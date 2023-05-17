@@ -35,7 +35,7 @@ public class Test {
         int opcion = 0;
         do{
             System.out.println("\n Menu \n1. Ingreso de Cantante \n2. Ingreson de Compositor \n3. Agregar Clientes \n4. Imprimir"
-                    + " \n5. Buscqueda de cantante por el nombre del disco \n6. Busqueda de compositor por nombre de cancion \n7. Salir");
+                    + " \n5. Busqueda de cantante por el nombre del disco \n6. Busqueda de compositor por nombre de cancion \n7. Salir");
             opcion = entrada.nextInt();
             switch(opcion) {
                 case 1:
