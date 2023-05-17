@@ -90,7 +90,7 @@ public class VistaCompositor {
     //buscar compositor, ingresar dato del codigo del compositor
     public int buscarCompositor() {
         entrada = new Scanner(System.in);
-        System.out.println("Ingresa el id del compositor a buscar");
+        System.out.println("Ingresa el codigo del compositor a buscar");
         int id = entrada.nextInt();
         return id;
     }
