@@ -47,19 +47,19 @@ public class VistaCancion {
     
     public Cancion eliminarDisco(){
         //Ingresar datos por teclado con el Scanner
-        System.out.println("Ingresar el codigo del cancion a eliminar: ");
+        System.out.println("Ingresar el codigo de la cancion a eliminar: ");
         int codigo = entrada.nextInt();
         return new Cancion(codigo);
     }
     public int buscarDisco(){
         entrada = new Scanner(System.in);
-        System.out.println("Ingresa el codigo del disco a buscar");
+        System.out.println("Ingresa el codigo de la cancion a buscar");
         int codigo = entrada.nextInt();
         return codigo;
     }
     
     public void verDisco(Cancion cancion){
-        System.out.println("Datos del cancion: " + cancion);
+        System.out.println("Datos de la cancion: " + cancion);
     }
     public void verDiscografia(List<Cancion> listaCancion){
         System.out.println("***********LISTA CANCION***********");
