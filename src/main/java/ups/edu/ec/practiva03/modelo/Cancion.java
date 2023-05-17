@@ -4,7 +4,6 @@
  */
 package ups.edu.ec.practiva03.modelo;
 
-import java.util.Objects;
 
 /**
  *
@@ -18,7 +17,6 @@ public class Cancion {
     private double tiempoEnMinutos;
     
     //constructo de la clase
-    
     public Cancion() {
     }
     
@@ -61,7 +59,8 @@ public class Cancion {
     public void setTiempoEnMinutos(double tiempoEnMinutos) {
         this.tiempoEnMinutos = tiempoEnMinutos;
     }
-
+    
+    //metodos de la clase
     @Override
     public int hashCode() {
         int hash = 3;
