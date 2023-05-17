@@ -115,8 +115,9 @@ public class VistaCantante {
     
     //ver la lista de cantantes
     public void verCantantes(List<Cantante> cantantes) {
+        System.out.println("*********** LISTA CANTANTE ***********");
         for (Cantante c : cantantes) {
-            System.out.println("Datos cantante: " + c);
+            System.out.println( c);
         }
     }
     
