@@ -91,8 +91,8 @@ public class VistaCompositor {
     public int buscarCompositor() {
         entrada = new Scanner(System.in);
         System.out.println("Ingresa el codigo del compositor a buscar");
-        int id = entrada.nextInt();
-        return id;
+        int codigo = entrada.nextInt();
+        return codigo;
     }
     
     //recibe un compositor e imprime los datos
