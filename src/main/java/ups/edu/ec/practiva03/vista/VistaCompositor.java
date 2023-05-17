@@ -102,8 +102,9 @@ public class VistaCompositor {
     
     //ver la lista de compositor
     public void verCompositores(List<Compositor> compositores) {
+        System.out.println("***********LISTA COMPOSITORES***********");
         for (Compositor c : compositores) {
-            System.out.println("***********LISTA COMPOSITORES*********** \n" + c);
+            System.out.println(c);
         }
     }
     //buscar compositor por nombre de cancion
