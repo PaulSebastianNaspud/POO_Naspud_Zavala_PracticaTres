@@ -35,25 +35,7 @@ public class VistaCompositor {
         double salario = Double.parseDouble(entrada.nextLine());
         System.out.println("Ingresat el numero de composiciones del compositor; ");
         int nDeComposiciones = entrada.nextInt();
-        Compositor compositor = new Compositor(nDeComposiciones, codigo, nombre, apellido, edad, salario, nacionalidad);
-        System.out.println("Ingesar las cantidades de canciones del compositor: ");
-        int cantidad = entrada.nextInt();
-        entrada.nextLine();//salto nextInt
-        for (int i = 0; i < cantidad; i++) {  //for para ingresar datos por teclado para llenar la lista de canciones
-            System.out.println("Ingresar el codigo de la cancion: ");
-            int codigo2 = entrada.nextInt();
-            entrada.nextLine();
-            System.out.println("Ingresar el titulo de la cancion: ");
-            String titulo = entrada.nextLine();
-            System.out.println("Ingresar la la letra de la canciom: ");
-            String letra = entrada.nextLine();
-            System.out.println("Ingresar el tiempo de duracion de la cancion: ");
-            double tiempoEnMinutos = Double.parseDouble(entrada.nextLine());
-            //llamar el metodo agregarCancion de la clase Persona
-            compositor.agregarCancion(codigo2, titulo, letra, tiempoEnMinutos);
-        }
-        compositor.calularSalario(); // llamar al metodo calcularSalario
-        return compositor;
+        return new Compositor(nDeComposiciones, codigo, nombre, apellido, edad, salario, nacionalidad);
     }
 
     //actualizar datos del compositor atraves del codigo   
