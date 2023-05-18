@@ -9,6 +9,8 @@ import java.util.List;
 import ups.edu.ec.practiva03.modelo.Cantante;
 import ups.edu.ec.practiva03.vista.VistaCantante;
 import ups.edu.ec.practiva03.idao.ICantanteDAO;
+import ups.edu.ec.practiva03.modelo.Disco;
+import ups.edu.ec.practiva03.vista.VistaDisco;
 
 /**
  *
@@ -19,6 +21,7 @@ public class ControladorCantante {
     private Cantante cantante;
     //objeto vist
     private VistaCantante vistaCantante;
+    private VistaDisco vistaDisco;
     //obejto dinamico cantante
     private ICantanteDAO cantanteDAO;
     
@@ -26,9 +29,10 @@ public class ControladorCantante {
     public ControladorCantante() {
     }
 
-    public ControladorCantante(ICantanteDAO cantanteDAO, VistaCantante vistaCantante) {
+    public ControladorCantante(ICantanteDAO cantanteDAO, VistaCantante vistaCantante, VistaDisco vistaDisco) {
         this.cantanteDAO = cantanteDAO;
         this.vistaCantante = vistaCantante;
+        this.vistaDisco = vistaDisco;
     }
     
     //metodos de la clase utilzacion de los objetos
@@ -40,6 +44,7 @@ public class ControladorCantante {
     public void verCantante(){
         int id = vistaCantante.buscarCantante();
         cantante = cantanteDAO.read(id);
+        vistaCantante.verCantante(cantante);
     }
     
     public void actualizarCantante(){
@@ -53,17 +58,56 @@ public class ControladorCantante {
     }
     
     public void verCantantes(){
-        List<Cantante> cantantes = new ArrayList();
+        List<Cantante> cantantes;
         cantantes = cantanteDAO.findAll();
         vistaCantante.verCantantes(cantantes);
     }
     
     //metodos de la composcion
+    public void ingresarDisco(){
+        Disco disco = vistaDisco.ingresarDisco();
+        int codigo = vistaCantante.buscarCantante();
+        cantante = cantanteDAO.read(codigo);
+        cantante.agregarDisco(disco);
+        cantanteDAO.update(cantante);
+    }
     
+    public void verDisco(){
+        int codigoDisco = vistaDisco.buscarDisco();
+        int codigo = vistaCantante.buscarCantante();
+        cantante = cantanteDAO.read(codigo);
+        Disco disco = cantante.buscarDisco(codigoDisco);
+        vistaDisco.verDisco(disco);
+    }
+    
+    public void actualizarDisco(){
+        int codigo = vistaCantante.buscarCantante();
+        cantante = cantanteDAO.read(codigo);
+        Disco disco = vistaDisco.actualizarDisco();
+        cantante.actualizarDisco(disco);
+        cantanteDAO.update(cantante);
+    }
+    
+    public void eliminarDisco(){
+        Disco disco = vistaDisco.eliminarDisco();
+        int codigo = vistaCantante.buscarCantante();
+        cantante = cantanteDAO.read(codigo);
+        cantante.eliminarDisco(disco);
+        cantanteDAO.update(cantante);
+    }
+    
+    public void verDiscos(){
+        List <Disco> discografia;
+        int codigo = vistaCantante.buscarCantante();
+        cantante = cantanteDAO.read(codigo);
+        discografia =cantante.listarDiscografia();
+        vistaDisco.verDiscografia(discografia);
+    }
     
     //metodo para buscar cantante por nombre del disco
     public void buscarCantantePorDisco(){
         String nombre = vistaCantante.buscarPorNombreDeDisco();
-        System.out.println(cantanteDAO.buscarPorNombreDeDisco(nombre));
+        cantante = cantanteDAO.buscarPorNombreDeDisco(nombre);
+        vistaCantante.verCantante(cantante);
     }
 }
