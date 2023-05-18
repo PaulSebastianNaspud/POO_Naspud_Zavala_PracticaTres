@@ -38,6 +38,7 @@ public class ControladorCantante {
     //metodos de la clase utilzacion de los objetos
     public void registrar(){
         cantante = vistaCantante.ingresarCantante();
+        cantante.calularSalario();
         cantanteDAO.create(cantante);
     }
     
