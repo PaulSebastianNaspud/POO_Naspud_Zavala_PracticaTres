@@ -35,7 +35,7 @@ public class CompositorDAO implements ICompositorDAO{
                 //comparar Strings hasta que se cumpla la condicion atraves del get
                 if (cancion.getTitulo().equals(valor)) {
                     return compositor; //retunr de persona
-                }break;
+                }
             }
         }return null; // si no existe, return null
     }
