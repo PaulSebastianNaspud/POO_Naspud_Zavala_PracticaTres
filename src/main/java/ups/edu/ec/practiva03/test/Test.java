@@ -67,7 +67,7 @@ public class Test {
                     break;
                 case 2:
                     do{
-                        System.out.println("\nMenu del Compositor \n1 Registrar Compositor \n2. Ver Compositor \n3. Actualizar Compositor "
+                        System.out.println("\nMenu del Compositor \n1. Registrar Compositor \n2. Ver Compositor \n3. Actualizar Compositor "
                             + "\n4. Eliminar Compositor \n5. Ver lista Compositores \n.6 Volver al menu Principal");
                     opcion = entrada.nextInt();
                         switch(opcion){
