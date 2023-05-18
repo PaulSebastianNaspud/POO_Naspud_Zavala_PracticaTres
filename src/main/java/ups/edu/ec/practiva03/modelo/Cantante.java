@@ -6,7 +6,6 @@ package ups.edu.ec.practiva03.modelo;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
 /**
  *
@@ -85,8 +84,7 @@ public class Cantante extends Persona {
     }
 
     //metodos de la discografia
-    public void agregarDisco(int codigo, String nombre, int anioDeLanzamiento) {
-        Disco disco = new Disco(codigo, nombre, anioDeLanzamiento);
+    public void agregarDisco(Disco disco) {
         discografia.add(disco);
     }
 
@@ -109,10 +107,9 @@ public class Cantante extends Persona {
     }
 
     public Disco buscarDisco(int codigo) {
-        for(Disco disco : discografia) {
-            if (disco.getCodigo() == codigo){
-                return disco;
-            }break;
+        for (int i = 0; i < discografia.size() ; i++) {
+            if(discografia.get(i).getCodigo() == codigo)
+                return discografia.get(i);
         }
         return null;
     }
