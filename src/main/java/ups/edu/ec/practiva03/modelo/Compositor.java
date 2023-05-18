@@ -50,8 +50,7 @@ public class Compositor extends Persona {
     }
     
     //top100Billaboar
-    public void agregarCancion(int codigo,String titulo,String letra,double tiempoEnMinutos){
-        Cancion cancion = new Cancion(codigo, titulo, letra, codigo);
+    public void agregarCancion(Cancion cancion){
         cancionesTop100Billaboar.add(cancion);   
     }
 
@@ -73,11 +72,12 @@ public class Compositor extends Persona {
         return cancionesTop100Billaboar;
     }
 
-    public Cancion buscarCancionesTop100Billaboar(int codigo) {
-        for(Cancion cancion: cancionesTop100Billaboar){
-            if(cancion.getCodigo() == codigo){
-                return cancion;
-            } 
+    public Cancion buscarCancion(int codigo) {
+        for (int i = 0; i < cancionesTop100Billaboar.size(); i++) {
+            if(cancionesTop100Billaboar.get(i).getCodigo() == codigo){
+                return cancionesTop100Billaboar.get(i);
+            }
+            
         }
         return null;
     }
@@ -106,9 +106,9 @@ public class Compositor extends Persona {
     }
 
     public Cantante buscarCliente(int codigo) {
-        for(Cantante cantante : clientes){
-            if(cantante.getCodigo()== codigo){
-                return cantante;
+        for (int i = 0; i < clientes.size(); i++) {
+            if(clientes.get(i).getCodigo() == codigo){
+                return clientes.get(i);
             }
         }
         return null;
