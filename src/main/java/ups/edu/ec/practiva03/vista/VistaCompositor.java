@@ -25,15 +25,14 @@ public class VistaCompositor {
         System.out.println("Ingresar el nombre del compositor: ");
         String nombre = entrada.nextLine();
         System.out.println("Ingresar el apelldo del compositor: ");
-        String apellido = entrada.nextLine();//salto nextInt
-        System.out.println("Ingresar la edad del compositor: ");
-        int edad = entrada.nextInt();
-        entrada.nextLine();//salto de nextInt
+        String apellido = entrada.nextLine();
         System.out.println("Ingresar la nacionalidad del compositor: ");
         String nacionalidad = entrada.nextLine();
-        System.out.println("Ingresar el salario del compositor: ");
         double salario = Double.parseDouble(entrada.nextLine());
         System.out.println("Ingresat el numero de composiciones del compositor; ");
+        System.out.println("Ingresar la edad del compositor: ");
+        int edad = entrada.nextInt();
+        System.out.println("Ingresar el salario del compositor: ");
         int nDeComposiciones = entrada.nextInt();
         return new Compositor(nDeComposiciones, codigo, nombre, apellido, edad, salario, nacionalidad);
     }
@@ -44,18 +43,17 @@ public class VistaCompositor {
         //Ingresar datos por teclado con el Scanner
         System.out.println("Ingresar el codigo del compositor a actualizar: ");
         int codigo = entrada.nextInt();
-        entrada.nextLine();//posible salto de nextInt
+        entrada.nextLine();// salto de nextInt
         System.out.println("Ingresar el nombre del compositor: ");
         String nombre = entrada.nextLine();
         System.out.println("Ingresar el apelldo del compositor: ");
-        String apellido = entrada.nextLine();//salto nextInt
-        System.out.println("Ingresar la edad del compositor: ");
-        int edad = entrada.nextInt();
-        entrada.nextLine();//salto de nextInt
+        String apellido = entrada.nextLine();
         System.out.println("Ingresar la nacionalidad del compositor: ");
         String nacionalidad = entrada.nextLine();
         System.out.println("Ingresar el salario del compositor: ");
         double salario = Double.parseDouble(entrada.nextLine());
+        System.out.println("Ingresar la edad del compositor: ");
+        int edad = entrada.nextInt();
         System.out.println("Ingresat el numero de composiciones del compositor; ");
         int nDeComposiciones = entrada.nextInt();
         return new Compositor(nDeComposiciones, codigo, nombre, apellido, edad, salario, nacionalidad);
@@ -63,7 +61,6 @@ public class VistaCompositor {
     
     //metodo para elimiar compositor atraves del id, utiliza un constructor deun  solo con el parametro codigo, no le elimina
     public Compositor eliminarCompositor(){
-        entrada.nextLine();
         System.out.println("Ingresa el id del compositor a eliminar");
         int codigo = entrada.nextInt();
         return new Compositor(codigo);
@@ -71,7 +68,6 @@ public class VistaCompositor {
     
     //buscar compositor, ingresar dato del codigo del compositor
     public int buscarCompositor() {
-        entrada = new Scanner(System.in);
         System.out.println("Ingresa el codigo del compositor a buscar");
         int codigo = entrada.nextInt();
         return codigo;
