@@ -43,6 +43,7 @@ public class ControladorCompositor {
 
     public void registrar() {
         compositor = vistaCompositor.inresarCompositor();
+        compositor.calularSalario();
         compositorDAO.create(compositor);
     }
 
