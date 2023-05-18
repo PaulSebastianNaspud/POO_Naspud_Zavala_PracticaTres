@@ -68,7 +68,7 @@ public class Test {
                 case 2:
                     do{
                         System.out.println("\nMenu del Compositor \n1. Registrar Compositor \n2. Ver Compositor \n3. Actualizar Compositor "
-                            + "\n4. Eliminar Compositor \n5. Ver lista Compositores \n6. Volver al menu Principal");
+                            + "\n4. Eliminar Compositor \n5. Ver lista Compositores \n6. Agregar un cliente \n7. Volver al menu Principal");
                     opcion = entrada.nextInt();
                         switch(opcion){
                             case 1:
@@ -86,8 +86,10 @@ public class Test {
                             case 5:
                                 controladorCompositor.verCompositores();
                                 break;
+                            case 6:
+                                controladorCompositor.agreagarCliente();
                         }
-                    }while(opcion !=6);
+                    }while(opcion !=7);
                     break;
                 case 3:
                     do{
