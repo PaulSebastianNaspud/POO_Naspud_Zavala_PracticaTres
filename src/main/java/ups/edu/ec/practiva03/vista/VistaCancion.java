@@ -16,17 +16,16 @@ public class VistaCancion {
     Scanner entrada = new Scanner(System.in);
     
     public Cancion ingresarCancion(){
-       entrada.nextLine();//posible salto de nextInt
         //Ingresar datos por teclado con el Scanner
         System.out.println("Ingresar el codigo de la cancion: ");
         int codigo = entrada.nextInt();
-        System.out.println("Ingresar la duracion de la cancion: ");
-        double tiempoEnM = Double.parseDouble(entrada.nextLine());
         entrada.nextLine();//posible salto de nextInt
         System.out.println("Ingresar el titulo de la cancion: ");
         String titulo = entrada.nextLine();
         System.out.println("Ingresar el letra de la cancion: ");
         String letra = entrada.nextLine();
+        System.out.println("Ingresar la duracion de la cancion: ");
+        double tiempoEnM = Double.parseDouble(entrada.nextLine());
         return new Cancion(codigo, titulo, letra, tiempoEnM); 
     }
     
@@ -34,13 +33,13 @@ public class VistaCancion {
         //Ingresar datos por teclado con el Scanner
         System.out.println("Ingresar el codigo de la cancion a actualizar: ");
         int codigo = entrada.nextInt();
-        System.out.println("Ingresar la duracion de la cancion: ");
-        double tiempoEnM = Double.parseDouble(entrada.nextLine());
         entrada.nextLine();//posible salto de nextInt
         System.out.println("Ingresar el titulo de la cancion: ");
         String tirulo = entrada.nextLine();
         System.out.println("Ingresar el letra de la cancion: ");
         String letra = entrada.nextLine();
+        System.out.println("Ingresar la duracion de la cancion: ");
+        double tiempoEnM = Double.parseDouble(entrada.nextLine());
         return new Cancion(codigo, tirulo, letra, tiempoEnM); 
     }
     
