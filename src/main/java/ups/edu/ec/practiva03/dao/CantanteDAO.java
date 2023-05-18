@@ -31,7 +31,7 @@ public class CantanteDAO implements ICantanteDAO{
                     //comparar Strings hasta que se cumpla la condicion atraves del get
                     if (disco.getNombre().equals(valor)) { 
                         return cantante; //return de persona
-                    }break;
+                    }
             }
         }return null; // si no exite, return null
     } 
