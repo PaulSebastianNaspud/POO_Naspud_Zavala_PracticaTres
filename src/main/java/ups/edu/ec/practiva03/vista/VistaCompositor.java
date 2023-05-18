@@ -53,7 +53,7 @@ public class VistaCompositor {
         System.out.println("Ingresar el salario del compositor: ");
         double salario = Double.parseDouble(entrada.nextLine());
         System.out.println("Ingresar la edad del compositor: ");
-        int edad = entrada.nextInt();System.out.println("Ingresar el salario del compositor: ");
+        int edad = entrada.nextInt();
         System.out.println("Ingresat el numero de composiciones del compositor; ");
         int nDeComposiciones = entrada.nextInt();
         return new Compositor(nDeComposiciones, codigo, nombre, apellido, edad, salario, nacionalidad);
